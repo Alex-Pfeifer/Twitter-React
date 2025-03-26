@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Avatar = () => {
+const Avatar = ({user, size}) => {
     return (
-       <img className={`user-avatar`} src={'Avatar'} alt='Avatar' />
+       <img className={`user-avatar ${size || ''}`} src={user.avatar} alt={user.name} />
     );
 };
 

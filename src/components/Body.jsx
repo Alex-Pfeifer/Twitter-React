@@ -2,10 +2,10 @@ import React from 'react';
 import Content from "./Content.jsx";
 import Sidebar from "./Sidebar.jsx";
 
-const Body = () => {
+const Body = ({user, stats}) => {
     return (
         <div className={'body'}>
-            <Sidebar/>
+            <Sidebar user={user} stats={stats}/>
             <Content/>
         </div>
     );
