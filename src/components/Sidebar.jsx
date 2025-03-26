@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Stats from "./Stats.jsx";
+import {TwitterContext} from "../utils/context.js";
 
-const Sidebar = ({user, stats}) => {
+const Sidebar = () => {
+
+    const {stats} = useContext(TwitterContext)
     return (
         <div className={'sidebar'}>
-            <Stats user={user} stats={stats}/>
+            <Stats stats={stats}/>
         </div>
     );
 };
