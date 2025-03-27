@@ -20,11 +20,15 @@ function App() {
         setUser( {...user, avatar: url || user.avatar});
     }
 
+    const changeAvatarName = name => {
+        setUser( {...user, name: name || user.name});
+    }
+
 
     return (
         <div className={'app'}>
             <TwitterContext.Provider value={{
-                user, stats, changeAvatar
+                user, stats, changeAvatar, changeAvatarName
             }}>
                 <Navigation/>
                 <Body/>
