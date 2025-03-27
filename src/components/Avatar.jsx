@@ -11,8 +11,9 @@ const Avatar = ({size}) => {
                changeAvatar(url)
            }}
 
-           onContextMenu={() => {
-               const name = prompt("Enter Avatar Name:");
+           onContextMenu={(e) => {
+               e.preventDefault();
+               const name = prompt("Enter User Name:");
                changeAvatarName(name);
            }}
 
